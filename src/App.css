@@ -4,7 +4,7 @@
   min-height: 100vh;
   background-image: url(./assets//background.jpeg);
   background-size: cover;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .App-header {
