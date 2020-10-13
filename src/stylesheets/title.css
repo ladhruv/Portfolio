@@ -1,0 +1,22 @@
+.titleContainer {
+  display: flex;
+  color: white;
+  height: 20vh;
+  width: 80%;
+  margin: 7em auto auto;
+  justify-content: center;
+  align-items: center;
+}
+.titleH1 {
+  display: inline-flex;
+  font-size: 9vw;
+  font-weight: 450;
+  padding-right: 0.2em;
+}
+#titleH2 {
+  color: red;
+  padding-right: 0;
+}
+#titleH3 {
+  padding-right: 0;
+}
