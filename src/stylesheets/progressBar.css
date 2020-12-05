@@ -1,0 +1,17 @@
+.progress-Bar {
+  display: flex;
+  position: relative;
+  height: 20px;
+  width: 100px;
+  border-radius: 50px;
+  border: 1px solid #333;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.filter {
+  background: #1da598;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.2s ease-in;
+}
