@@ -5,15 +5,12 @@
   background-image: url(./assets//background.jpeg);
   background-size: cover;
   flex-direction: row;
+  overflow-y: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.projectTableContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 1em;
 }
