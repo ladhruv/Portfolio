@@ -4,3 +4,4 @@ export const GINEER = "ngineer";
 export const HOME = "Home";
 export const PROJECTS = "Projects";
 export const CONTACT = "Contact";
+export const EXPERIENCE = "Experience";
