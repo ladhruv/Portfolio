@@ -24,11 +24,11 @@ const Project = () => {
                 <span>
                   <a
                     href={project.html_url}
-                    style={{ textDecoration: "none", color: "blue" }}
+                    style={{ textDecoration: "none", color: "#399cf1" }}
                   >
                     <i
                       className="fab fa-github"
-                      style={{ fontSize: "large" }}
+                      style={{ fontSize: "35px" }}
                     ></i>
                   </a>
                 </span>
