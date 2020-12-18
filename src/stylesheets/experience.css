@@ -1,0 +1,33 @@
+.experience-Container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+  padding-inline-start: 2em;
+}
+
+.experienceTimeFrame {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-between;
+  padding-inline-start: 1em;
+}
+
+.experienceInfo {
+  display: flex;
+  align-items: center;
+}
+.experienceName {
+  margin: 0.5em 0;
+}
+
+.experienceInfo > i {
+  margin-right: 0.5em;
+}
+
+@media (max-width: 50em) {
+  .experienceName {
+    font-size: 25px;
+  }
+}
