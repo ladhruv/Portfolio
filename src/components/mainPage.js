@@ -4,6 +4,7 @@ import Title from "./title";
 import SectionLayout from "./sectionLayout";
 import Skills from "../pages/skills";
 import Project from "../pages/project";
+import Experience from "../pages/experience";
 import "../App.css";
 
 const mainPage = () => {
@@ -27,7 +28,11 @@ const mainPage = () => {
           titleName="PROJECT"
           component={<Project />}
         />
-        <SectionLayout idTag="experience" titleName="EXPERIENCE" />
+        <SectionLayout
+          idTag="experience"
+          titleName="EXPERIENCE"
+          component={<Experience />}
+        />
       </div>
     </>
   );

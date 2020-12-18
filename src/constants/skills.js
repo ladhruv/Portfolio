@@ -65,5 +65,11 @@ export const FRAMEWORKTOOLS = {
       color: "#e6561f",
       logo: "fab fa-jira",
     },
+    {
+      name: "GitHub",
+      expertiseLevel: "70",
+      color: "#e6561f",
+      logo: "fab fa-github",
+    },
   ],
 };
