@@ -5,7 +5,7 @@ import MainPage from "./components/mainPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Route exact path="/" component={MainPage} />
     </Router>
   );

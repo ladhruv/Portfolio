@@ -8,6 +8,7 @@ import Experience from "../pages/experience";
 import "../App.css";
 
 const mainPage = () => {
+  console.log("test this page");
   return (
     <>
       <div className="App">
