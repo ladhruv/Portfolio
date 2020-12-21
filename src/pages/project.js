@@ -11,6 +11,7 @@ const Project = () => {
           <Table.TextHeaderCell>Name</Table.TextHeaderCell>
           <Table.TextHeaderCell>Created at</Table.TextHeaderCell>
           <Table.TextHeaderCell>Github Link</Table.TextHeaderCell>
+          <Table.TextHeaderCell>Language</Table.TextHeaderCell>
           <Table.TextHeaderCell>Description</Table.TextHeaderCell>
         </Table.Head>
         <Table.Body height={"100%"}>
@@ -33,6 +34,7 @@ const Project = () => {
                   </a>
                 </span>
               </Table.TextCell>
+              <Table.TextCell>{project.language}</Table.TextCell>
               <Table.TextCell>{project.description}</Table.TextCell>
             </Table.Row>
           ))}
