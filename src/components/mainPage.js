@@ -1,17 +1,20 @@
 import React from "react";
 import NavBar from "./navBar";
+import Menu from "./menu";
 import Title from "./title";
 import SectionLayout from "./sectionLayout";
 import Skills from "../pages/skills";
 import Project from "../pages/project";
 import Experience from "../pages/experience";
+import useWindowSize from "../utils/WindowSize";
 import "../App.css";
 
-const mainPage = () => {
+const MainPage = () => {
+  const { width } = useWindowSize();
   return (
     <>
       <div className="App">
-        <NavBar />
+        {width > 500 ? <NavBar /> : <Menu />}
         <Title />
         <div>
           <h3 style={{ color: "white" }}>Dhruv Lad</h3>
@@ -38,4 +41,4 @@ const mainPage = () => {
   );
 };
 
-export default mainPage;
+export default MainPage;

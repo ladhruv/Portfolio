@@ -13,3 +13,7 @@
   margin: 0 auto;
   margin-top: 1em;
 }
+.menuTab {
+  text-decoration: none;
+  color: black;
+}

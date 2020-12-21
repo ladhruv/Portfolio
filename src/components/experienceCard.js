@@ -2,7 +2,7 @@ import React from "react";
 
 const experienceCard = ({ experience }) => {
   return (
-    <div>
+    <div style={{ width: "95%" }}>
       <h1 className="experienceName">{experience.jobTitle}</h1>
       <h3 style={{ margin: "0", paddingInlineStart: "1em", color: "gray" }}>
         {experience.name}
