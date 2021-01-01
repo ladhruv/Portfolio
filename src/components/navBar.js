@@ -1,9 +1,18 @@
 import React from "react";
 import * as LABELS from "../constants/label";
 import { HashLink } from "react-router-hash-link";
+import Contact from "../pages/contact";
 import "../stylesheets/navBar.css";
 
-const navBar = () => {
+const NavBar = () => {
+  const [state, setState] = React.useState({
+    isShown: false,
+  });
+
+  const handleClostDialog = () => {
+    setState({ isShown: false });
+  };
+
   return (
     <div className="navBarContainer">
       <HashLink className="tabButton" smooth to="/">
@@ -15,10 +24,15 @@ const navBar = () => {
       <HashLink className="tabButton" smooth to="/#experience">
         {LABELS.EXPERIENCE}
       </HashLink>
-      <HashLink className="tabButton" smooth to="/#contact">
+      <div className="tabButton" onClick={() => setState({ isShown: true })}>
         {LABELS.CONTACT}
-      </HashLink>
+      </div>
+      {state.isShown ? (
+        <Contact isShown={state.isShown} closeDialog={handleClostDialog} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
-export default navBar;
+export default NavBar;

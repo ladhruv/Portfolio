@@ -25,6 +25,10 @@
   display: inline-grid;
   margin-right: 1em;
   margin-top: 0.5em;
+  transition: transform 0.2s;
+}
+.skillCard:hover {
+  transform: scale(1.2);
 }
 .skillCard > i {
   font-size: 5vw;
@@ -33,4 +37,11 @@
 .skillCard > span {
   margin: auto;
   margin-bottom: 0.5em;
+}
+
+@media (max-width: 50em) {
+  .skillCard > i {
+    font-size: 28px;
+    margin: auto auto 5px;
+  }
 }
