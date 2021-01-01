@@ -6,7 +6,7 @@ const skillsCard = (props) => {
     <div className="skillCard">
       <i className={`${props.language}`}></i>
       <span>{props.name}</span>
-      <ProgressBar percentage={props.number} color={props.color} />
+      <ProgressBar completed={props.number} bgcolor={props.color} />
     </div>
   );
 };
