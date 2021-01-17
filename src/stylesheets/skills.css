@@ -1,47 +1,46 @@
 .skill-Container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
   width: 90%;
-  padding-inline-start: 2em;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
 }
 
 .skillSection {
-  display: inline-flex;
-  flex-direction: column;
-}
-.skillTitle {
-  font-size: 3vh;
-  font-weight: 800;
-}
-.skillCardSection {
-  width: 100%;
-  margin-top: 1em;
-  flex-direction: row;
-}
-.skillCard {
-  border: 1px solid black;
-  width: 130px;
-  display: inline-grid;
-  margin-right: 1em;
-  margin-top: 0.5em;
-  transition: transform 0.2s;
-}
-.skillCard:hover {
-  transform: scale(1.2);
-}
-.skillCard > i {
-  font-size: 5vw;
-  margin: auto auto 5px;
-}
-.skillCard > span {
+  width: 25%;
   margin: auto;
-  margin-bottom: 0.5em;
 }
 
-@media (max-width: 50em) {
-  .skillCard > i {
-    font-size: 28px;
-    margin: auto auto 5px;
+.skillInfo {
+  width: 100%;
+  margin: 4em auto;
+}
+.skillInfo > i {
+  font-size: 65px;
+  margin: 15px;
+}
+.backendElement {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .skill-Container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+  }
+  .skillSection {
+    width: 100%;
+  }
+  .backendElement {
+    justify-content: center;
   }
 }

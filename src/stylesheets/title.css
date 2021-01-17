@@ -2,7 +2,7 @@
   display: flex;
   color: white;
   height: 20vh;
-  width: 80%;
+  width: fit-content;
   margin: 7em auto auto;
   justify-content: center;
   align-items: center;
@@ -11,12 +11,20 @@
   display: inline-flex;
   font-size: 9vw;
   font-weight: 450;
-  padding-right: 0.2em;
 }
-#titleH2 {
-  color: red;
-  padding-right: 0;
-}
-#titleH3 {
-  padding-right: 0;
+@media (max-width: 50em) {
+  .titleH1 {
+    display: inline-flex;
+    font-size: 50px;
+    font-weight: 450;
+  }
+  .titleContainer {
+    display: flex;
+    color: white;
+    height: 15vh;
+    width: fit-content;
+    margin: 7em auto auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
