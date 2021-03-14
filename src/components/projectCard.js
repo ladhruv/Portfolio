@@ -17,6 +17,8 @@ const ProjectCard = ({ project, photo }) => {
             <div className="card_body">
               <a
                 href={project.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ textDecoration: "none", color: "#399cf1" }}
               >
                 <h2>{project.name}</h2>
