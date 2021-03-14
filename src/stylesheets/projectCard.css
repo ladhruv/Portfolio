@@ -1,0 +1,88 @@
+.cardContainer {
+  height: 300px;
+  width: 235px;
+  margin: auto;
+  margin-bottom: 1.2em;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  perspective: 800;
+  -webkit-perspective: 800;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+.front {
+  /*background-image: linear-gradient(to bottom right, #ffce00, #fe4880);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back,
+.isFlipped {
+  transform: rotateY(180deg);
+}
+.backCardContent {
+  height: 100%;
+  width: 100%;
+}
+.backCardHeader {
+  position: relative;
+  padding: 10px 10px 20px;
+}
+.backCardHeader::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.backCardBody {
+  padding: 1px 30px;
+  margin-top: 4em;
+}
+.card_Header {
+  background-image: linear-gradient(to bottom left, #ffce00 10%, #fe4880 115%);
+  z-index: 0;
+  border-radius: 0px 0px 50% 0px;
+}
+.card_body {
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card_body > h2 {
+  color: red;
+  font-size: 20px;
+}
+
+.photo {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 5px solid #fff;
+  object-fit: contain;
+}

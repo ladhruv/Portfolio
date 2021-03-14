@@ -9,7 +9,6 @@ export const ProjectProvider = ({ children }) => {
       const response = await axios.get(
         "https://api.github.com/users/ladhruv/repos"
       );
-      console.log(response.data);
       setProject(response.data);
     };
     fetchRepo();

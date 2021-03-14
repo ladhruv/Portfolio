@@ -1,45 +1,33 @@
 import React, { useContext } from "react";
 import { ProjectContext } from "../context/projectContext";
-import { Table } from "evergreen-ui";
+import ProjectCard from "../components/projectCard";
+import { PROJECTPICTURE } from "../constants/projectPhoto";
+import DefaultPicture from "../assets/default.png";
 
 const Project = () => {
   const projectContext = useContext(ProjectContext);
   return (
-    <div className="projectTableContainer">
-      <Table>
-        <Table.Head height={70} style={{ backgroundColor: "#e2b281" }}>
-          <Table.TextHeaderCell>Name</Table.TextHeaderCell>
-          <Table.TextHeaderCell>Created at</Table.TextHeaderCell>
-          <Table.TextHeaderCell>Github Link</Table.TextHeaderCell>
-          <Table.TextHeaderCell>Language</Table.TextHeaderCell>
-          <Table.TextHeaderCell>Description</Table.TextHeaderCell>
-        </Table.Head>
-        <Table.Body height={"100%"}>
-          {projectContext.project.map((project) => (
-            <Table.Row key={project.id} height={70}>
-              <Table.TextCell textProps={{ size: 500, fontWeight: "800" }}>
-                {project.name}
-              </Table.TextCell>
-              <Table.TextCell>{project.created_at}</Table.TextCell>
-              <Table.TextCell>
-                <span>
-                  <a
-                    href={project.html_url}
-                    style={{ textDecoration: "none", color: "#399cf1" }}
-                  >
-                    <i
-                      className="fab fa-github"
-                      style={{ fontSize: "35px" }}
-                    ></i>
-                  </a>
-                </span>
-              </Table.TextCell>
-              <Table.TextCell>{project.language}</Table.TextCell>
-              <Table.TextCell>{project.description}</Table.TextCell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
+    <div
+      style={{
+        width: "90%",
+        margin: "auto",
+        display: "flex",
+        flexWrap: "wrap",
+      }}
+    >
+      {projectContext.project.map((project, index) => {
+        return (
+          <ProjectCard
+            project={project}
+            key={project.id}
+            photo={
+              PROJECTPICTURE[index] === undefined
+                ? { link: DefaultPicture }
+                : PROJECTPICTURE[index]
+            }
+          />
+        );
+      })}
     </div>
   );
 };
